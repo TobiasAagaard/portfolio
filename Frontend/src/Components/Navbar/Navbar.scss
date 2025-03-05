@@ -1,17 +1,32 @@
 .mainNav {
+   margin-top: 3rem;
     .mainUl {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
 
         li {
             list-style: none;
             a {
+                padding: 1rem;
                 color: #fefefe;
                 text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                border-radius: 5px;
                 
             }
-            
+            .active {
+                background-color: #914Bf1;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .mainNav {
+        .mainUl {
+            display: none;
         }
     }
 }

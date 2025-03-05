@@ -1,3 +1,41 @@
 .burgerNav {
     display: none;
 }
+
+@media only screen and (max-width: 880px) {
+    .menuStyles {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.5rem;
+        height: 1.2rem;
+        top: 3rem;
+        right: 3rem;
+        cursor: pointer;
+        span {
+            height: 0.2rem;
+            width: 100%;
+           background-color: #fff;
+            border-radius: 0.2rem;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .start {
+        
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(-3.5px, 12.1px);
+            transition: ease-out 0.3s;
+        }
+        span:nth-child(2) {
+            transform: scale(0);
+            transition: ease-out 0.3s;
+
+        }
+        span:nth-child(3) {
+            transform: rotate(135deg) translate(0.9px, 15px);
+            transition: ease-out 0.3s;
+        }
+    }
+}
