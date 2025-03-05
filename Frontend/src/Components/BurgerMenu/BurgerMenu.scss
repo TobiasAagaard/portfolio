@@ -38,4 +38,35 @@
             transition: ease-out 0.3s;
         }
     }
+    .burgerNav {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 92vh;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        li {
+            list-style: none;
+            opacity: 0;
+            transition: 1s ease-in-out;
+            a {
+                
+                text-decoration: none;
+                color: #fff;
+               
+                
+            }
+            
+        }
+    } .open {
+        transform:translateX(0%) ;
+        li {
+            opacity: 1;
+        }
+    }
 }
+
+
