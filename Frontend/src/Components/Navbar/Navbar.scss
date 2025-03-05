@@ -4,8 +4,7 @@
     .mainUl {
        display: flex;
        justify-content: center;
-       align-items: center;
-        gap: 1rem;
+       gap: 1rem;
 
         li {
             list-style: none;
@@ -47,8 +46,9 @@
     img {
        width: 45px;
        position: absolute;
-       top: 0;
-       right: 15rem;
+       top: -1.02vh;
+       right: 10vw;
+       cursor: pointer;
     }
 }
 

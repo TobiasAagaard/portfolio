@@ -5,7 +5,7 @@ import "./BurgerMenu.scss"
 
 export const BurgerMenu: React.FC = () => {
 
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const handleToggle = () => {
         setMenuOpen(!menuOpen);
