@@ -1,6 +1,9 @@
 
-export const Frontpage: React.FC = () => {
-    return {
 
-    }
-}
+export const Frontpage: React.FC = () => {
+    return (
+       <header>
+        
+       </header>
+    );
+};
