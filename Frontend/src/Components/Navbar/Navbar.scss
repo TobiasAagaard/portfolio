@@ -1,25 +1,54 @@
 .mainNav {
    margin-top: 3rem;
+   position: relative;
     .mainUl {
-        display: flex;
-        justify-content: center;
+       display: flex;
+       justify-content: center;
+       align-items: center;
         gap: 1rem;
 
         li {
             list-style: none;
             a {
+                position: relative;
                 padding: 1rem;
                 color: #fefefe;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: 0.8rem;
-                border-radius: 5px;
-                
+                overflow: hidden;
+                transition: color 0.3s ease;
+            
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 100%;
+                    border-radius: 5px;
+                    background-color: #914Bf1;
+                    transition: width 0.4s ease;
+                    z-index: -1;
+                }
+            
+                &.active {
+                    color: #fff;
+                }
+            
+                &.active::after {
+                    width: 100%;
+                }
             }
-            .active {
-                background-color: #914Bf1;
-            }
+            
+            
         }
+    }
+    img {
+       width: 45px;
+       position: absolute;
+       top: 0;
+       right: 15rem;
     }
 }
 
