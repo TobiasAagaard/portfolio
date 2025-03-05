@@ -1,0 +1,17 @@
+.mainNav {
+    .mainUl {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        li {
+            list-style: none;
+            a {
+                color: #fefefe;
+                text-decoration: none;
+                
+            }
+            
+        }
+    }
+}
