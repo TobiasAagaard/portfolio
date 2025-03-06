@@ -4,38 +4,47 @@
 
 @media only screen and (max-width: 880px) {
     .menuStyles {
-        display: flex;
+        top: -0.6rem;
+        right: 1.5rem;
         position: absolute;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 1.5rem;
-        height: 1.2rem;
-        top: 0.5vh;
-        right: 3rem;
+        height: 50px;
+        width: 40px;
+        margin-left: auto;
+        position: relative;
         cursor: pointer;
         span {
-            height: 0.2rem;
+            height: 2px;
             width: 100%;
             background-color: #fff;
-            border-radius: 0.2rem;
-            transition: all 0.3s ease-in-out;
+            border-radius: 25px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s ease;
+        }
+
+        span:nth-child(1) {
+            top: 25%;
+        }
+        span:nth-child(2) {
+            top: 75%;
         }
     }
 
     .start {
         
         span:nth-child(1) {
-            transform: rotate(45deg) translate(-3.5px, 12.1px);
-            transition: ease-out 0.3s;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
         }
         span:nth-child(2) {
-            transform: scale(0);
-            transition: ease-out 0.3s;
+            opacity: 0;
 
         }
         span:nth-child(3) {
-            transform: rotate(135deg) translate(0.9px, 15px);
-            transition: ease-out 0.3s;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
         }
     }
     .burgerNav {
