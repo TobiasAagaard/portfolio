@@ -6,6 +6,7 @@ import { BurgerMenu } from "../BurgerMenu/BurgerMenu"
 import "./Navbar.scss"
 
 export const Navbar: React.FC = () => {
+
     return (
         <nav className="mainNav">
             <ul className="mainUl">
