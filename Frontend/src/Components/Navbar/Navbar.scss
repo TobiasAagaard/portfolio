@@ -1,54 +1,50 @@
 .mainNav {
-   margin-top: 3rem;
-   position: relative;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  
     .mainUl {
-       display: flex;
-       justify-content: center;
-       gap: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #1e1e1e;
+      border-radius: 2rem;
+  
+      li {
+        list-style: none;
+  
+        a {
+          display: block;
+          padding: 0.5rem 1.2rem;
+          color: #bbb;
+          text-decoration: none;
+          font-size: 0.9rem;
+          border-radius: 1.5rem;
+          transition: all 0.3s ease;
+  
+          &.active {
+            background: #00f5d4;
+            width: 100%;
+            color: #000;
+            font-weight: bold;
+            animation: bounce 0.4s ease-out;
+          }
 
-        li {
-            list-style: none;
-            a {
-                position: relative;
-                padding: 1rem;
-                color: #fefefe;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 0.8rem;
-                overflow: hidden;
-                transition: color 0.3s ease;
-            
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 0;
-                    height: 100%;
-                    border-radius: 5px;
-                    background-color: #914Bf1;
-                    transition: width 0.4s ease;
-                    z-index: -1;
-                }
-            
-                &.active {
-                    color: #fff;
-                }
-            
-                &.active::after {
-                    width: 100%;
-                }
-            }
-            
-            
         }
+      }
     }
-}
-
-@media only screen and (max-width: 880px) {
+  }
+  
+  @media only screen and (max-width: 880px) {
     .mainNav {
-        .mainUl {
-            display: none;
-        }
+      .mainUl {
+        display: none;
+      }
     }
-}
+  }
+
+  @keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
