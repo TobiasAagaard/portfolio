@@ -8,7 +8,7 @@ export const BurgerMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const handleToggle = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen((prev) => !prev);
     }
     return (
         <>
