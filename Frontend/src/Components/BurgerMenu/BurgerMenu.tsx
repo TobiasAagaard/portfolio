@@ -19,8 +19,8 @@ export const BurgerMenu: React.FC = () => {
             </div>
 
             <ul className={menuOpen ? "burgerNav open" : "burgerNav"}>
-                <li><NavLink to={"/"}>Forside</NavLink></li>
-                <li><NavLink to={"/projects"}>Projekter</NavLink></li>
+                <li><NavLink to={"/"} onClick={handleToggle}>Forside</NavLink></li>
+                <li><NavLink to={"/projects"} onClick={handleToggle}>Projekter</NavLink></li>
             </ul>
         </>
     )

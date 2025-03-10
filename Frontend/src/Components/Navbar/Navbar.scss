@@ -1,13 +1,20 @@
 .mainNav {
-    display: flex;
-    justify-content: center;
-  
+  display: flex;
+  justify-content: flex-end;
+  h1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 1.7rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    color: #bbb;
+  }
     .mainUl {
       display: flex;
       gap: 1.5rem;
+      margin-right: 2vw;
       padding: 0.5rem 1rem;
-      background-color: #1e1e1e;
-      border-radius: 2rem;
   
       li {
         list-style: none;
@@ -22,9 +29,7 @@
           transition: all 0.3s ease;
   
           &.active {
-            background: #00f5d4;
             width: 100%;
-            color: #000;
             font-weight: bold;
             animation: bounce 0.4s ease-out;
           }
@@ -36,6 +41,7 @@
   
   @media only screen and (max-width: 880px) {
     .mainNav {
+      padding-bottom: 2rem;
       .mainUl {
         display: none;
       }
