@@ -1,0 +1,31 @@
+.tech-grid {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.tech-track {
+    display: flex;
+    animation: marquee-scroll 100s linear infinite;
+    width: max-content; /* Ensures smooth animation */
+}
+
+.tech-item {
+    display: flex;
+    min-width: 200px; /* Adjust based on layout */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}:hover {
+    animation-play-state: paused;
+}
+
+/* Smooth scrolling animation */
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

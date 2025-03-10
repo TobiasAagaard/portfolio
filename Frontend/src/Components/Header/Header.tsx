@@ -17,8 +17,9 @@ export const Header: React.FC = () => {
     const [text] = useTypewriter({
         words,
         loop: true,
-        typeSpeed: 120,
-        delaySpeed: 2500,
+        typeSpeed:70,
+        deleteSpeed:50,
+        delaySpeed:2500,
        
     });
     return (
