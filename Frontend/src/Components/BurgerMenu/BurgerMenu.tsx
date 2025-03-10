@@ -21,8 +21,8 @@ export const BurgerMenu: React.FC = () => {
             <ul className={menuOpen ? "burgerNav open" : "burgerNav"}>
                 <li><NavLink to={"/"} onClick={handleToggle}>Forside</NavLink></li>
                 <li><NavLink to={"/projects"} onClick={handleToggle}>Projekter</NavLink></li>
-                <li><NavLink to={"/projects"} onClick={handleToggle}>About Me</NavLink></li>
-                <li><NavLink to={"/projects"} onClick={handleToggle}>Contact</NavLink></li>
+                <li><NavLink to={"/About"} onClick={handleToggle}>About Me</NavLink></li>
+                <li><NavLink to={"/Contact"} onClick={handleToggle}>Contact</NavLink></li>
             </ul>
         </>
     )
