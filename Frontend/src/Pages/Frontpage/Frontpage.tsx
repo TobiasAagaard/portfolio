@@ -7,7 +7,7 @@ export const Frontend: React.FC = () => {
     const {t} = useTranslation();
     return (
         <header>
-            <h1>{t('welcomeMessege')}</h1>
+            <h1>{t('welcomeMessage')}</h1>
             <img src={myImg} width={"200px"} alt="" />
         </header>
     )
