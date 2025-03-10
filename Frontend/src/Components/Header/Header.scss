@@ -1,0 +1,56 @@
+header {
+    max-width: 1200px;
+    margin: 15vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    h2:first-child {
+        font-size: 2.8rem;
+    }
+    h2 {
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+        color: #fff;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    .writerBox {
+        display: inline-block;
+        width: 300px;
+        white-space: nowrap; 
+    }
+
+    img {
+        border-radius: 50%;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    header {
+        gap: 2.5rem;
+        h2:first-child{
+            font-size: 1.8rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+        h2:first-child{
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            .writerBox {
+                text-align: left;
+            }
+        }
+    }
+}
