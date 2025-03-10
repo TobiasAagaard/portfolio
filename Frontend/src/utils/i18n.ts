@@ -7,12 +7,24 @@ import { initReactI18next } from "react-i18next";
 const resources: Resource = {
   dk: {
     translation: {
-        welcomeMessage: "Velkommen til React and react-i18next"
+        welcomeMessage: "Hej, mit Navn er Tobias 👋",
+        introText: "Jeg er en",
+        typewriter: {
+        "first": "Frontend Udvikler",
+        "second": "Backend Udvikler",
+        "third": "Software udvikler"
+    }
     }
   },
   en: {
     translation: {
-        welcomeMessage: "Welcome to React and react-i18next"
+        welcomeMessage: "Hey, I'm Tobias 👋",
+        introText: "I am a",
+        typewriter: {
+          "first": "Frontend Developer",
+          "second": "Backend Developer",
+          "third": "Software Developer"
+      }
     }
   }
 };
@@ -23,7 +35,7 @@ i18n
     debug: true,
     fallbackLng: 'dk',
     resources,
-    lng: "dk", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
 

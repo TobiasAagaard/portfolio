@@ -39,7 +39,6 @@
     .start {
         
         span:nth-child(1) {
-            background-color: #000;
             top: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
         }
@@ -48,7 +47,6 @@
 
         }
         span:nth-child(3) {
-            background-color: #000;
             top: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
         }
@@ -58,7 +56,7 @@
         margin: 0;
         padding: 0;
         position: fixed;
-        background-color: #673AB7 ;
+        background: radial-gradient( rgba(43,55,96,1), rgba(11,16,35,1));
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -69,7 +67,7 @@
         transition: transform 0.5s ease-in-out;
         
         li {
-            padding-bottom: 10rem;
+            padding-bottom: 12vh;
             list-style: none;
             opacity: 0;
             transition: 1s ease-in-out;
