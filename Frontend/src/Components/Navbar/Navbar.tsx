@@ -13,8 +13,8 @@ export const Navbar: React.FC = () => {
        <ul className="mainUl">
             <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>Projects</NavLink></li>
-            <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>Om mog</NavLink></li>
-            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Kontakt</NavLink></li>
+            <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Me</NavLink></li>
+            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink></li>
       </ul>
             
         <BurgerMenu />

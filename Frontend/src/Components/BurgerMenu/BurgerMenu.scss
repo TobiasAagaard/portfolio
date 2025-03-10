@@ -56,10 +56,10 @@
         margin: 0;
         padding: 0;
         position: fixed;
-        background-color: #00f5d4;
+        background-color: #f8dd9f;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         height: 100vh;
         width: 100%;
         right: 0;
@@ -67,6 +67,7 @@
         transition: transform 0.5s ease-in-out;
         
         li {
+            padding-bottom: 10rem;
             list-style: none;
             opacity: 0;
             transition: 1s ease-in-out;
@@ -77,6 +78,9 @@
                 color: #000;
             }
             
+        }
+        li:last-child {
+            padding-bottom: 0;
         }
     } .open {
         transform:translateY(0%) ;
