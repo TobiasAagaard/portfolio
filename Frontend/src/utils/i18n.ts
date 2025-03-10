@@ -7,12 +7,12 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   dk: {
     translation: {
-      "Welcome to React": "Velkommen til React and react-i18next"
+      welcomeMessege: "Velkommen til React and react-i18next"
     }
   },
   en: {
     translation: {
-       "Welcome to React": "Welcome to React and react-i18next"
+        welcomeMessege: "Welcome to React and react-i18next"
     }
   }
 };
