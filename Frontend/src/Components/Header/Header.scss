@@ -5,6 +5,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 10rem;
+    text-align: center;
     h2:first-child {
         font-size: 2.8rem;
     }
@@ -15,10 +16,20 @@ header {
         font-size: 2.5rem;
         letter-spacing: 1px;
     }
+    h2:last-child{
+        padding: 1rem 0.5rem;
+        width: 517px;
+        color: #0a0a0a;
+        background-color: #f8dd9f;
+        border-radius: 20px;
+        text-align: left;
+        
+    }
     .writerBox {
         display: inline-block;
         width: 300px;
         white-space: nowrap; 
+        text-align: left;
     }
 
     img {
@@ -51,6 +62,11 @@ header {
             .writerBox {
                 text-align: left;
             }
+        }
+        h2:last-child {
+            text-align: center;
+            background-color: #0a0a0a;
+            color: #fff;
         }
     }
 }

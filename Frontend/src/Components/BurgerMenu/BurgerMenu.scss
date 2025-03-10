@@ -61,7 +61,7 @@
         margin: 0;
         padding: 0;
         position: fixed;
-        background: radial-gradient( rgba(43,55,96,1), rgba(11,16,35,1));
+        background: #f8dd9f;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -79,7 +79,7 @@
            
             a {
                 font-size: 1.5rem;
-                color: #ebebeb; 
+                color: #0a0a0a; 
                 text-decoration: none;
                 text-transform: uppercase;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
