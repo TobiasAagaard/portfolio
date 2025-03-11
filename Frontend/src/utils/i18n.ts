@@ -7,23 +7,26 @@ import { initReactI18next } from "react-i18next";
 const resources: Resource = {
   dk: {
     translation: {
-        welcomeMessage: "Hej, mit Navn er Tobias 👋",
+        welcomeMessage: "Hej, mit Navn er Tobias👋",
         introText: "Jeg er en",
         typewriter: {
-        "first": "Frontend Udvikler",
-        "second": "Backend Udvikler",
-        "third": "Software udvikler"
-    }
+        first: "Frontend Udvikler",
+        second: "Backend Udvikler",
+        third: "Software udvikler"
+    },
+        navLinks: {
+          
+        }
     }
   },
   en: {
     translation: {
-        welcomeMessage: "Hey, I'm Tobias 👋",
+        welcomeMessage: "Hey, I'm Tobias👋",
         introText: "I am a",
         typewriter: {
-          "first": "Frontend Developer",
-          "second": "Backend Developer",
-          "third": "Software Developer"
+          first: "Frontend Developer",
+          second: "Backend Developer",
+          third: "Software Developer"
       }
     }
   }
