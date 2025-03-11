@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
 
     return (
         <nav className="mainNav">
-            <h1>Tobias Aagaard Christiansen</h1>
+            <h1>Tobias<span className="dotH1">.</span></h1>
        <ul className="mainUl">
             <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>Projects</NavLink></li>
