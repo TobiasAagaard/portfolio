@@ -7,12 +7,12 @@ import { initReactI18next } from "react-i18next";
 const resources: Resource = {
   dk: {
     translation: {
-        welcomeMessage: "Hej, mit Navn er Tobias👋",
-        introText: "Jeg er en",
+        welcomeMessage: "Hej, jeg hedder er Tobias👋",
+        introText: "Jeg er",
         typewriter: {
         first: "Frontend Udvikler",
         second: "Backend Udvikler",
-        third: "Software udvikler"
+        third: "Software Udvikler"
     },
         navLinks: {
           
