@@ -1,11 +1,11 @@
 import {JSX, useState } from "react";
 import {
+  
   SiCss3,
   SiDocker,
   SiExpress,
   SiFigma,
   SiGithub,
-  SiGo,
   SiHtml5,
   SiJavascript,
   SiNetlify,
@@ -24,6 +24,7 @@ import {
 
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
+import { DiVisualstudio } from "react-icons/di";
 
 import "./Tech.scss";
 
@@ -47,7 +48,6 @@ const techs: Tech[] = [
   { name: "HTML", icon: <SiHtml5 size={size} /> },
   { name: "JavaScript", icon: <SiJavascript size={size} /> },
   { name: "TypeScript", icon: <SiTypescript size={size} /> },
-  { name: "Go", icon: <SiGo size={size} /> },
   { name: "PostgreSQL", icon: <SiPostgresql size={size} /> },
   { name: "Sequelize  ORM", icon: <SiSequelize size={size} /> },
   { name: "Figma", icon: <SiFigma size={size} /> },
@@ -56,6 +56,7 @@ const techs: Tech[] = [
   { name: "Netlify", icon: <SiNetlify size={size} /> },
   { name: "Docker", icon: <SiDocker size={size} /> },
   { name: "Python", icon: <SiPython size={size} /> },
+  { name: "Visual Studio Code", icon: <DiVisualstudio size={size} /> },
   { name: "Ubuntu", icon: <SiUbuntu size={size} /> },
 ];
 
