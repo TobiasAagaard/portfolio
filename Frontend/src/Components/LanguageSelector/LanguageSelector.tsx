@@ -1,7 +1,7 @@
-
-import { ul } from "framer-motion/client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
+import { GrLanguage } from "react-icons/gr";
+import "./LanguageSelector.scss"
 
 interface Language {
     code: string,
@@ -19,6 +19,14 @@ const language: Language[] = [
 export const LanguageSelector: React.FC = () => {
     const {i18n} = useTranslation()
 
+    const [open, setOpen] = useState(false)
+    
+    const size = 30
+
+    const handleToggle = () => {
+        setOpen((prev) => !prev);
+    }
+
     useEffect(() => {
         const savedLanguage = localStorage.getItem("language");
         if (savedLanguage) {
@@ -31,10 +39,24 @@ const changeLanguage = (lng: string) => {
     localStorage.setItem("language", lng)
 }
     return (
-        
-        language.map((lng) => {
-            return (
-            <button key={lng.code} onClick={() => changeLanguage(lng.code)}>{lng.lang}</button>
-        )})
+        <>
+        <GrLanguage className="globeBtn" size={size} onClick={handleToggle} />
+            {open &&(
+                <div className="lngBtnDropdown">
+                {language.map((lng) => {
+                    return (
+                        <button 
+                        key={lng.code} 
+                        onClick={() => {
+                            changeLanguage(lng.code);
+                            handleToggle();
+                        }}
+                    >
+                        {lng.lang}
+                    </button>
+                )})}
+                </div>
+        )}
+        </>
     )
 }
