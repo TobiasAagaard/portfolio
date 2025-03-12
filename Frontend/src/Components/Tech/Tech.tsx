@@ -1,14 +1,13 @@
 import {JSX, useState } from "react";
+import { motion } from "framer-motion";
 import {
   
   SiCss3,
-  SiDocker,
   SiExpress,
   SiFigma,
   SiGithub,
   SiHtml5,
   SiJavascript,
-  SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
@@ -53,8 +52,6 @@ const techs: Tech[] = [
   { name: "Figma", icon: <SiFigma size={size} /> },
   { name: "Github", icon: <SiGithub size={size} /> },
   { name: "Vercel", icon: <SiVercel size={size} /> },
-  { name: "Netlify", icon: <SiNetlify size={size} /> },
-  { name: "Docker", icon: <SiDocker size={size} /> },
   { name: "Python", icon: <SiPython size={size} /> },
   { name: "Visual Studio Code", icon: <DiVisualstudio size={size} /> },
   { name: "Ubuntu", icon: <SiUbuntu size={size} /> },
@@ -64,15 +61,21 @@ export const Tech: React.FC = () => {
   const [techsList] = useState(techs);
 
   return (
-    <div className="tech-grid">
-         <div className="tech-track">
+    <motion.div
+      className="tech-grid"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2, delay: 1.6 }}
+    >
+      <h3>Technologies</h3>
+      <div className="tech-track">
         {techsList.map((skill, index) => (
-        <div key={index} className="tech-item">
-          <span className="tech-icon">{skill.icon}</span>
-          <p className="tech-name">{skill.name}</p>
-        </div>
-      ))}
+          <div key={index} className="tech-item">
+            <span className="tech-icon">{skill.icon}</span>
+            <p className="tech-name">{skill.name}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

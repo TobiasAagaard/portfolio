@@ -1,14 +1,20 @@
 .tech-grid {
-    margin-top: 15rem;
+    margin-top: 10rem;
     overflow: hidden;
     white-space: nowrap;
     color: #fff;
     z-index: 0;
 
+    h3 {
+        margin: 0 0 5rem 0;
+        font-size: 2rem;
+        text-align: center;
+        
+    }
 
 .tech-track {
     display: flex;
-    animation: marquee-scroll 100s linear infinite;
+    animation: marquee-scroll 50s linear infinite alternate;
     width: max-content; /* Ensures smooth animation */
 
 
@@ -18,18 +24,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
 }:hover {
     animation-play-state: paused;
-}
 }
 }
 
 /* Smooth scrolling animation */
 @keyframes marquee-scroll {
     from {
-        transform: translateX(0);
+        transform: translateX(-50%);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(0);
     }
 }
