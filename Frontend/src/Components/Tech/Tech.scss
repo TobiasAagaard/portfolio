@@ -15,12 +15,12 @@
 .tech-track {
     display: flex;
     animation: marquee-scroll 50s linear infinite alternate;
-    width: max-content; /* Ensures smooth animation */
+    width: max-content; 
 
 
 .tech-item {
     display: flex;
-    min-width: 200px; /* Adjust based on layout */
+    min-width: 200px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -30,10 +30,10 @@
 }
 }
 
-/* Smooth scrolling animation */
+
 @keyframes marquee-scroll {
     from {
-        transform: translateX(-50%);
+        transform: translateX(50%);
     }
     to {
         transform: translateX(0);

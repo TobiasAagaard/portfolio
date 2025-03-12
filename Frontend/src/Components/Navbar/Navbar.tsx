@@ -4,6 +4,7 @@ import { BurgerMenu } from "../BurgerMenu/BurgerMenu"
 
 
 import "./Navbar.scss"
+import { LanguageSelector } from "../LanguageSelector/LanguageSelector"
 
 export const Navbar: React.FC = () => {
 
@@ -16,7 +17,7 @@ export const Navbar: React.FC = () => {
             <li><NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Me</NavLink></li>
             <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink></li>
       </ul>
-            
+        <LanguageSelector />
         <BurgerMenu />
         </nav>
     )
