@@ -2,17 +2,19 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { GrLanguage } from "react-icons/gr";
 import "./LanguageSelector.scss"
+import denmarkImg from "../../assets/denmark.png";
+import englandImg from "../../assets/england.png";
 
 interface Language {
-    code: string,
-    lang: string
+    code: string;
+    lang: string;
+    img: string; // Image path or URL
 }
 
 const language: Language[] = [
-    {code: "en", lang: "English"},
-    {code: "dk", lang: "Dansk"},
-
-]
+    { code: "en", lang: "English", img: englandImg },
+    { code: "dk", lang: "Dansk", img: denmarkImg },
+];
 
 
 
@@ -45,15 +47,14 @@ const changeLanguage = (lng: string) => {
                 <div className="lngBtnDropdown">
                 {language.map((lng) => {
                     return (
-                        <button 
+                        <img src={lng.img}
                         key={lng.code} 
                         onClick={() => {
                             changeLanguage(lng.code);
                             handleToggle();
                         }}
-                    >
-                        {lng.lang}
-                    </button>
+                    />
+                     
                 )})}
                 </div>
         )}
