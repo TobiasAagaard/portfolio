@@ -48,6 +48,7 @@ const changeLanguage = (lng: string) => {
                 {language.map((lng) => {
                     return (
                         <img src={lng.img}
+                        alt={lng.lang}
                         key={lng.code} 
                         onClick={() => {
                             changeLanguage(lng.code);
