@@ -8,7 +8,7 @@ import englandImg from "../../assets/england.png";
 interface Language {
     code: string;
     lang: string;
-    img: string; // Image path or URL
+    img: string; 
 }
 
 const language: Language[] = [
