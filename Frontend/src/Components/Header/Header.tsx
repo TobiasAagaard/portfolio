@@ -9,9 +9,10 @@ export const Header: React.FC = () => {
     const {t} = useTranslation();
     const words:string[] = [
 
-        t("typewriter.first"),
-        t("typewriter.second"),
-        t("typewriter.third")
+        t("typewriter.frontend"),
+        t("typewriter.backend"),
+        t("typewriter.fullstack"),
+        t("typewriter.software")
     ];
 
     const [text] = useTypewriter({

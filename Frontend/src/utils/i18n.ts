@@ -10,9 +10,10 @@ const resources: Resource = {
         welcomeMessage: "Hej, jeg hedder er Tobias👋",
         introText: "Jeg er",
         typewriter: {
-        first: "Frontend Udvikler",
-        second: "Backend Udvikler",
-        third: "Software Udvikler"
+        frontend: "Frontend Udvikler",
+        backend: "Backend Udvikler",
+        fullstack: "Fullstack Udvikler",
+        software: "Software Udvikler"
     },
         navLinks: {
           
@@ -24,9 +25,10 @@ const resources: Resource = {
         welcomeMessage: "Hey, I'm Tobias👋",
         introText: "I am a",
         typewriter: {
-          first: "Frontend Developer",
-          second: "Backend Developer",
-          third: "Software Developer"
+          frontend: "Frontend Developer",
+          backend: "Backend Developer",
+          fullstack: "Fullstack Developer",
+          software: "Software Developer"
       }
     }
   }
