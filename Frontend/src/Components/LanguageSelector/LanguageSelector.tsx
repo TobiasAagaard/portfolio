@@ -4,7 +4,6 @@ import { GrLanguage } from "react-icons/gr";
 import "./LanguageSelector.scss"
 import denmarkImg from "../../assets/denmark.png";
 import englandImg from "../../assets/england.png";
-import { motion } from "framer-motion";
 
 interface Language {
     code: string;
