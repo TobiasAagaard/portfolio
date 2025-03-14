@@ -4,6 +4,7 @@ import { GrLanguage } from "react-icons/gr";
 import "./LanguageSelector.scss"
 import denmarkImg from "../../assets/denmark.png";
 import englandImg from "../../assets/england.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Language {
     code: string;
@@ -43,22 +44,34 @@ const changeLanguage = (lng: string) => {
     return (
         <>
         <GrLanguage className="globeBtn" size={size} onClick={handleToggle} />
-            {open &&(
-                <div className="lngBtnDropdown">
-                {language.map((lng) => {
-                    return (
-                        <img src={lng.img}
-                        alt={lng.lang}
-                        key={lng.code} 
-                        onClick={() => {
-                            changeLanguage(lng.code);
-                            handleToggle();
-                        }}
-                    />
-                     
-                )})}
-                </div>
-        )}
+            
+ <AnimatePresence>
+  {open && (
+    <motion.div 
+      className="lngBtnDropdown"
+      initial={{ opacity: 0, y: -10 }}  
+      animate={{ opacity: 1, y: 0 }}    
+      exit={{ opacity: 0, y: -10 }}     
+      transition={{ duration: 0.3 }}   
+    >
+      {language.map((lng) => (
+        <motion.img 
+          key={lng.code}
+          src={lng.img}
+          alt={lng.lang}
+          onClick={() => {
+            changeLanguage(lng.code);
+            handleToggle();
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}  
+          transition={{ duration: 0.5, delay: 0.1 }}
+        />
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
         </>
     )
 }
