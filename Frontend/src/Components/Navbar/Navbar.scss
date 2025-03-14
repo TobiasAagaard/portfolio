@@ -1,6 +1,7 @@
 .mainNav {
   display: flex;
   justify-content: center;
+  
 
   h1 {
     padding: 0;
@@ -23,8 +24,12 @@
       display: flex;
       gap: 1.5rem;
       padding: 0.5rem 1rem;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, #0a0a0a, #fff, #0a0a0a) 1;
+      
   
       li {
+        padding-bottom: 0.7rem;
         list-style: none;
   
         a {
