@@ -17,7 +17,7 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1 + 0.1 * index, // Starts after div fades in (1s delay)
+     delay: 1 + 0.1 * index, 
     }
   }),
 }
