@@ -42,9 +42,9 @@ export const Tech: React.FC = () => {
       <h3>Technologies</h3>
       <div className="tech-track">
         {techsList.map((skill, index) => (
-          <div key={index} className="tech-item">
-            <p className="tech-name">{skill.name}</p>
-          </div>
+         
+            <p className="tech-name" key={index}>{skill.name}</p>
+          
         ))}
       </div>
     </motion.div>
