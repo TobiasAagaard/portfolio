@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio project showcasing my skills, projects, and experience. The project is built with a **React TypeScript** frontend and an **ASP.NET** backend.
+This is my personal portfolio project showcasing my skills, projects, and experience. The project is built with a **React TypeScript** frontend and an **ASP.NET** backend REST Api.
 
 ## Technologies Used
 
