@@ -14,7 +14,6 @@ import {
   SiPostgresql,
   SiReact,
   SiTypescript,
-  SiUbuntu,
   SiVercel,
 } from "react-icons/si";
 
@@ -35,10 +34,11 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1 + 0.1 * index,
+      delay: 1.2 + 0.12 * index,
     },
   }),
 };
+
 
 const size = 30;
 
@@ -103,11 +103,6 @@ const techs: Tech[] = [
       icon: <SiDocker size={size} />,
       color: "#6EC6FF"
     },
-    {
-      name: "Ubuntu",
-      icon: <SiUbuntu size={size} />,
-      color: "#FF8A65"
-    },
   
 ];
 
@@ -123,7 +118,7 @@ export const Tech: React.FC = () => {
       transition={{ delay: 1, duration: 0.5 }}
       aria-labelledby="tech-heading"
     >
-      <h3 id="tech-heading">{t('techHeader')}</h3>
+      <motion.h3 id="tech-heading">{t('techHeader')}</motion.h3>
       <ul className="tech-track">
         {techsList.map((skill, index) => (
           <motion.li

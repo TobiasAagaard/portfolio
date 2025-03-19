@@ -5,6 +5,11 @@
     right: 4rem;
     cursor: pointer;
     transition: 0.5s ease;
+    &:hover, &.active{
+        background-color: #335EEA;
+        padding: 3px;
+        border-radius: 50%;
+    }
 }
 
 .lngBtnDropdown {

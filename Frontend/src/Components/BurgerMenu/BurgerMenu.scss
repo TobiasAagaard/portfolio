@@ -61,14 +61,14 @@
         margin: 0;
         padding: 0;
         position: fixed;
-        background: #f8dd9f;
+        background: #335EEA;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
-        width: 100%;
+        width: 70%;
         right: 0;
-        transform: translateY(-100%); 
+        transform: translateX(100%); 
         transition: transform 0.5s ease-in-out;
         z-index: 9998;
         li {
@@ -79,7 +79,7 @@
            
             a {
                 font-size: 1.5rem;
-                color: #0a0a0a; 
+                color: #fff; 
                 text-decoration: none;
                 text-transform: uppercase;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -89,7 +89,7 @@
             padding-bottom: 0;
         }
     } .open {
-        transform:translateY(0%) ;
+        transform:translateX(0%) ;
         li {
             opacity: 1;
         }

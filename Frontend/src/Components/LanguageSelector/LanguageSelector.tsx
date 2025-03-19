@@ -43,7 +43,7 @@ const changeLanguage = (lng: string) => {
 }
     return (
         <>
-        <GrLanguage className="globeBtn" size={size} onClick={handleToggle} />
+        <GrLanguage   className={`globeBtn ${open ? 'active' : ''}`}  size={size} onClick={handleToggle} />
             
  <AnimatePresence>
   {open && (

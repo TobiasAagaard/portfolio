@@ -7,33 +7,30 @@ import { initReactI18next } from "react-i18next";
 const resources: Resource = {
   dk: {
     translation: {
-        welcomeMessage: "Hej, jeg hedder er Tobias👋",
-        introText: "Jeg er",
-        typewriter: {
+      welcomeMessage: "Hej, jeg er Tobias👋",
+      introText: "Jeg er",
+      typewriter: {
         frontend: "Frontend Udvikler",
         backend: "Backend Udvikler",
         fullstack: "Fullstack Udvikler",
         software: "Software Udvikler"
-    },
-        navLinks: {
-          
-        },
-        techHeader: "Mine Teknologier",
+      },
+      techHeader: "De teknologier, jeg arbejder med",
     }
   },
   en: {
     translation: {
-        welcomeMessage: "Hey, I'm Tobias👋",
-        introText: "I am a",
-        typewriter: {
-          frontend: "Frontend Developer",
-          backend: "Backend Developer",
-          fullstack: "Fullstack Developer",
-          software: "Software Developer"
+      welcomeMessage: "Hey, I'm Tobias👋",
+      introText: "I'm a",
+      typewriter: {
+        frontend: "Frontend Developer",
+        backend: "Backend Developer",
+        fullstack: "Fullstack Developer",
+        software: "Software Developer"
       },
-      techHeader: "Technologies",
+      techHeader: "The Technologies I Work With",
     }
-  }
+  },
 };
 
 i18n
