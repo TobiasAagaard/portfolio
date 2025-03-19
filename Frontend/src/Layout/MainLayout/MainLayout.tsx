@@ -8,6 +8,8 @@ export const MainLayout: React.FC = () => {
         <>
             <Navbar />
             <Outlet />
+
+
         </>
     )
 }

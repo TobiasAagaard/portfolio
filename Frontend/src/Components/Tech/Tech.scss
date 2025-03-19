@@ -16,7 +16,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Ensures alignment */
+    justify-content: center;
     max-width: 53rem;
     gap: 1rem;
 }
@@ -24,8 +24,8 @@
 .tech-name {
     padding: 0;
     margin: 0;
-    width: 130px; /* Slightly increased for better alignment */
-    height: 45px; /* Adjusted for consistency */
+    width: 130px; 
+    height: 45px; 
     display: flex;
     justify-content: center;
     align-items: center;
