@@ -17,7 +17,8 @@ const resources: Resource = {
     },
         navLinks: {
           
-        }
+        },
+        techHeader: "Mine Teknologier",
     }
   },
   en: {
@@ -29,7 +30,8 @@ const resources: Resource = {
           backend: "Backend Developer",
           fullstack: "Fullstack Developer",
           software: "Software Developer"
-      }
+      },
+      techHeader: "Technologies",
     }
   }
 };

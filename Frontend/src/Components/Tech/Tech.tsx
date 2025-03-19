@@ -1,5 +1,6 @@
 import { JSX, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"
 
 import {
   SiCss3,
@@ -112,6 +113,7 @@ const techs: Tech[] = [
 
 export const Tech: React.FC = () => {
   const [techsList] = useState(techs);
+  const {t} = useTranslation();
 
   return (
     <motion.section
@@ -121,11 +123,11 @@ export const Tech: React.FC = () => {
       transition={{ delay: 1, duration: 0.5 }}
       aria-labelledby="tech-heading"
     >
-      <h3 id="tech-heading">Technologies</h3>
+      <h3 id="tech-heading">{t('techHeader')}</h3>
       <ul className="tech-track">
         {techsList.map((skill, index) => (
           <motion.li
-            className="tech-name"
+            className="tech-list"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -138,6 +140,7 @@ export const Tech: React.FC = () => {
             }}
           >
             {skill.icon}
+            <span className="techName">{skill.name}</span>
           </motion.li>
         ))}
       </ul>
