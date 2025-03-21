@@ -10,7 +10,10 @@ export const Navbar: React.FC = () => {
 
     return (
         <nav className="mainNav">
-            <h1>Tobias<span className="dotH1">.</span></h1>
+            <div className="navHeadingContainer">
+                <h1>Tobias</h1>
+                <span className="dotH1">.</span>
+            </div>
        <ul className="mainUl">
             <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>Projects</NavLink></li>

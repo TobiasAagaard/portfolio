@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Variable.woff2') format('woff2');
+    font-weight: 100 900; // Variable font supports all weights dynamically
+    font-style: normal;
+  }
+
 * {
     
     box-sizing: border-box;
@@ -10,7 +17,7 @@ body {
     padding: 0;
     background: #0a0a0a;
     height: 100vh;
-    font-family: "Lato", sans-serif;
+    font-family: "Switzer", sans-serif;
     overflow: auto; 
 }
 

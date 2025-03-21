@@ -2,22 +2,27 @@
   display: flex;
   justify-content: center;
   
-
-  h1 {
+ .navHeadingContainer {
     padding: 0;
     position: absolute;
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
-    top: -2.05rem;
+    top: 0.7rem;
     left: 2.1rem;
+  h1 {  
     font-size: 1.2rem;
     color: #eee;
     z-index: 10;
-    span {
-      padding: 0;
-      color: #335EEA;
-      font-size: 5rem;
-    }
+  }
+  .dotH1 {
+    margin: 0.2rem 0 0 0.2rem;
+    width: 15px;
+    height: 15px;
+    background-color: #335EEA;
+    border-radius: 50%;
+  }
 
   }
     .mainUl {
