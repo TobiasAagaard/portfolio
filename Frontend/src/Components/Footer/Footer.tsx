@@ -1,8 +1,5 @@
 
 
-
 export const Footer: React.FC = () => {
-    return (
-        null
-    )
+    return null
 }
