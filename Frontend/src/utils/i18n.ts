@@ -13,7 +13,8 @@ const resources: Resource = {
         frontend: "Frontend Udvikler",
         backend: "Backend Udvikler",
         fullstack: "Fullstack Udvikler",
-        software: "Software Udvikler"
+        software: "Software Udvikler",
+        web: "Webudvikler"
       },
       techHeader: "De teknologier, jeg arbejder med",
     }
@@ -26,7 +27,8 @@ const resources: Resource = {
         frontend: "Frontend Developer",
         backend: "Backend Developer",
         fullstack: "Fullstack Developer",
-        software: "Software Developer"
+        software: "Software Developer",
+        web: "Web Developer"
       },
       techHeader: "The Technologies I Work With",
     }

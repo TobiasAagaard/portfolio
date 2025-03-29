@@ -12,7 +12,8 @@ export const Header: React.FC = () => {
         t("typewriter.frontend"),
         t("typewriter.backend"),
         t("typewriter.fullstack"),
-        t("typewriter.software")
+        t("typewriter.software"),
+        t("typewriter.web")
     ];
 
     const [text] = useTypewriter({
