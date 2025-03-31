@@ -3,5 +3,11 @@
 
 
 export const Footer: React.FC = () => {
-    return null
+    return (
+        <footer>
+             <section className="SocialsContainer">
+
+             </section>
+        </footer>
+    )
 }
