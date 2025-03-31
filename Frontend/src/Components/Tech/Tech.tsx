@@ -15,6 +15,7 @@ import {
   SiReact,
   SiTypescript,
   SiVercel,
+  SiKubernetes,
 } from "react-icons/si";
 
 import "./Tech.scss";
@@ -102,6 +103,11 @@ const techs: Tech[] = [
       name: "Docker",
       icon: <SiDocker size={size} />,
       color: "#6EC6FF"
+    },
+    {
+      name: "Kubernetes",
+      icon: <SiKubernetes size={size}/>,
+      color: "#00A8E8",
     },
   
 ];

@@ -12,7 +12,7 @@ interface SocialsIcons {
     color: string;
 }
 
-const size = 30;
+const size = 22;
 
 const socials: SocialsIcons[] = [
     {
