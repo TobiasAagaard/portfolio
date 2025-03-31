@@ -1,3 +1,9 @@
+import { JSX } from "react";
+interface SocialsIcons {
+    name: string;
+    icon: JSX.Element;
+    link: string;
+}
 
 
 
