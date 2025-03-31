@@ -38,9 +38,9 @@ export const Footer: React.FC = () => {
     return (
         <footer>
              <section className="SocialsContainer">
-                {socialsList.map((social) => (
-                    <a href={social.link} target="_blank">
-                        {cloneElement(social.icon, { color: social.color })} 
+                {socialsList.map((social, index) => (
+                    <a key={index} href={social.link} target="_blank">
+                        {cloneElement( social.icon , { color: social.color })} 
                     </a>
                 ))}
              </section>
