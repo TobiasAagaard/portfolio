@@ -1,6 +1,9 @@
 
 import { JSX,cloneElement,  useState } from "react";
-import { SiGithub } from "react-icons/si";
+import { SiGithub,
+        SiLinkedin 
+ } from "react-icons/si";
+import "./footer.scss"
 interface SocialsIcons {
     name: string;
     icon: JSX.Element;
@@ -17,6 +20,12 @@ const socials: SocialsIcons[] = [
         link: "https://github.com/TobiasAagaard",
         color: "fff",
     },
+    {
+        name: "LinkDin",
+        icon: <SiLinkedin size={size} />,
+        link: "https://www.linkedin.com/in/tobias-aagaard-christiansen-006152288/",
+        color: "#fff"
+    }
 ]
 
 

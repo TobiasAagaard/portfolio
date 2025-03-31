@@ -1,0 +1,16 @@
+.SocialsContainer {
+    margin-top: 10vh;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    a {
+        svg {
+            opacity: 0.75;
+            transition: opacity 0.2s ease-in-out;
+        
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
