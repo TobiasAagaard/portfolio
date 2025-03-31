@@ -34,16 +34,26 @@ const socials: SocialsIcons[] = [
 
 export const Footer: React.FC = () => {
     const [socialsList] = useState(socials);
+    const footerRef = useRef(null);
+    const isInView = useInView(footerRef,);
 
     return (
-        <footer>
-             <section className="SocialsContainer">
+        <footer ref={footerRef} className="footer">
+            <section className="SocialsContainer">
                 {socialsList.map((social, index) => (
-                    <a key={index} href={social.link} target="_blank">
-                        {cloneElement( social.icon , { color: social.color })} 
-                    </a>
+                    <motion.a
+                        key={index}
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                    >
+                        {cloneElement(social.icon, { color: social.color })}
+                    </motion.a>
                 ))}
-             </section>
+            </section>
         </footer>
     )
 }
