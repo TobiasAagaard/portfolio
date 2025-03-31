@@ -1,5 +1,6 @@
 
-import { JSX,cloneElement,  useState } from "react";
+import { JSX, cloneElement,  useState, useRef  } from "react";
+import { motion, useInView } from "framer-motion";
 import { SiGithub,
         SiLinkedin 
  } from "react-icons/si";
