@@ -10,7 +10,7 @@ const resources: Resource = {
       welcomeMessage: "Hej, jeg er Tobias👋",
       introText: "Jeg er",
       typewriter: {
-        frontend: "Frontend Udvikler",
+        frontend: "Frontend Udviklers",
         backend: "Backend Udvikler",
         fullstack: "Fullstack Udvikler",
         software: "Software Udvikler",
