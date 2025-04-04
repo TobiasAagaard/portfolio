@@ -15,6 +15,7 @@ import {
   SiReact,
   SiTypescript,
   SiVercel,
+  SiGo,
   SiKubernetes,
 } from "react-icons/si";
 
@@ -83,6 +84,11 @@ const techs: Tech[] = [
       name: "TypeScript",
       icon: <SiTypescript size={size} />,
       color: "#64B5F6"
+    },
+    {
+      name: "GoLang",
+      icon: <SiGo size={size} />,
+      color: "#78909C"
     },
     {
       name: "PostgreSQL",
