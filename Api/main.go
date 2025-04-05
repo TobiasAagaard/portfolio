@@ -11,5 +11,5 @@ func main() {
 			"message": "this is my api",
 		})
 	})
-	router.Run()
+	router.Run("localhost:8080")
 }
