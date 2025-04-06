@@ -9,8 +9,11 @@ This is my personal portfolio project showcasing my skills, projects, and experi
 - Modern component-based architecture
 
 ### Backend
-- **ASP.NET Core**
-- RESTful API for serving project data, contact form submissions, and other dynamic content
+- **Go (Gin Framework)**
+- RESTful API built using the Gin web framework
+- Handles project data, contact form submissions, and other dynamic portfolio content
+- Organized with a clean MVC structure: `models`, `controllers`, and `routes`
+- JSON-based communication for seamless integration with frontend applications
 
 
 ## Setup Instructions
