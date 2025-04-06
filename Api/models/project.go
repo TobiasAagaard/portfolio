@@ -22,3 +22,7 @@ func (e Project) Save() {
 	//Later: add to Database
 	projects = append(projects, e)
 }
+
+func GetAllProjects() []Project {
+	return projects
+}
