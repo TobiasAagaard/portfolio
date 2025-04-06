@@ -22,5 +22,14 @@ func getProjects(context *gin.Context) {
 }
 
 func createProject(contex *gin.Context) {
+	var project models.Project
+	err := contex.ShouldBindJSON(&project)
 
+	if err != nil {
+		contex.JSON(http.StatusBadRequest, gin.H{"message": "Could not parse request data"})
+		return
+	}
+	project.ID = 1
+	project.UserId = 1
+	contex.JSON(http.StatusCreated, gin.H{"message": "Project created", "project": project})
 }

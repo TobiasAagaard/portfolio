@@ -4,13 +4,13 @@ import "time"
 
 type Project struct {
 	ID          int
-	Title       string
-	Description string
-	TechStack   []string
+	Title       string   `binding:"required"`
+	Description string   `binding:"required"`
+	TechStack   []string `binding:"required"`
 	GithubLink  string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
-	ImageURLs   []string
+	ImageURLs   []string `binding:"required"`
 	IsFeatured  bool
 	Slug        string
 	UserId      int
