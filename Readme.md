@@ -39,7 +39,7 @@ This is my personal portfolio project showcasing my skills, projects, and experi
     ```
 3. Run the backend server:
     ```bash
-    go run main.go
+    go run .
     ```
 4. The API will be available at `http://localhost:8080` (or your configured port).
 
