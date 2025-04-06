@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio project showcasing my skills, projects, and experience. The project is built with a **React TypeScript** frontend and an **ASP.NET** backend REST Api.
+This is my personal portfolio project showcasing my skills, projects, and experience. The project is built with a **React TypeScript** frontend and an **Go - Gin Framework** backend REST Api.
 
 ## Technologies Used
 
@@ -9,8 +9,11 @@ This is my personal portfolio project showcasing my skills, projects, and experi
 - Modern component-based architecture
 
 ### Backend
-- **ASP.NET Core**
-- RESTful API for serving project data, contact form submissions, and other dynamic content
+- **Go (Gin Framework)**
+- RESTful API built using the Gin web framework
+- Handles project data, contact form submissions, and other dynamic portfolio content
+- Organized with a clean MVC structure: `models`, `controllers`, and `routes`
+- JSON-based communication for seamless integration with frontend applications
 
 
 ## Setup Instructions
@@ -28,13 +31,15 @@ This is my personal portfolio project showcasing my skills, projects, and experi
 4. Access the portfolio at `http://localhost:5173` (or configured port).
 
 ### Backend
+
 1. Navigate to the `backend` folder.
-2. Restore dependencies:
+2. Install dependencies (if not already installed):
     ```bash
-    dotnet restore
+    go mod tidy
     ```
-3. Run the backend:
+3. Run the backend server:
     ```bash
-    dotnet run
+    go run .
     ```
-4. The API will be available at `http://localhost:5000` (or configured port).
+4. The API will be available at `http://localhost:8080` (or your configured port).
+
