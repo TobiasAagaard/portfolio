@@ -1,8 +1,10 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"portfolio/Api/models"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,15 +23,24 @@ func getProjects(context *gin.Context) {
 	context.JSON(http.StatusOK, projects)
 }
 
-func createProject(contex *gin.Context) {
+func createProject(c *gin.Context) {
 	var project models.Project
-	err := contex.ShouldBindJSON(&project)
 
-	if err != nil {
-		contex.JSON(http.StatusBadRequest, gin.H{"message": "Could not parse request data"})
+	if err := c.ShouldBindJSON(&project); err != nil {
+		log.Println("JSON binding error:", err.Error()) // <-- log the actual error here
+		c.JSON(http.StatusBadRequest, gin.H{
+			"message": "Could not parse request data",
+			"error":   err.Error(), // optional: send error back in response for debugging
+		})
 		return
 	}
-	project.ID = 1
+
+	project.ID = len(models.GetAllProjects()) + 1
 	project.UserId = 1
-	contex.JSON(http.StatusCreated, gin.H{"message": "Project created", "project": project})
+	project.CreatedAt = time.Now()
+	project.UpdatedAt = time.Now()
+
+	project.Save()
+
+	c.JSON(http.StatusCreated, gin.H{"message": "Project created", "project": project})
 }
