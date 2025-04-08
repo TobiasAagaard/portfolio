@@ -26,12 +26,17 @@ func createProject(context *gin.Context) {
 	err := context.ShouldBindJSON(&project)
 
 	if err != nil {
-		context.JSON(http.StatusBadRequest, gin.H{"messeage": "Could not parse request"})
+		context.JSON(http.StatusBadRequest, gin.H{
+			"message": "Could not parse request",
+			"error":   err.Error(),
+		})
 		return
 	}
 
 	project.ID = 1
 	project.UserID = 1
 
-	context.JSON(http.StatusCreated, gin.H{"messeage": "Project is created", "project": project})
+	project.Save()
+
+	context.JSON(http.StatusCreated, gin.H{"message": "Project is created", "project": project})
 }
