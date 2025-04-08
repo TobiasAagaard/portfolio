@@ -1,10 +1,8 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"portfolio/Api/models"
-	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,7 +13,7 @@ func main() {
 	server.GET("/projects", getProjects)
 	server.POST("/projects", createProject)
 
-	server.Run(":8080") //Localhost:8080
+	server.Run(":8080") //localhost
 }
 
 func getProjects(context *gin.Context) {
@@ -23,24 +21,17 @@ func getProjects(context *gin.Context) {
 	context.JSON(http.StatusOK, projects)
 }
 
-func createProject(c *gin.Context) {
+func createProject(context *gin.Context) {
 	var project models.Project
+	err := context.ShouldBindJSON(&project)
 
-	if err := c.ShouldBindJSON(&project); err != nil {
-		log.Println("JSON binding error:", err.Error()) // <-- log the actual error here
-		c.JSON(http.StatusBadRequest, gin.H{
-			"message": "Could not parse request data",
-			"error":   err.Error(), // optional: send error back in response for debugging
-		})
+	if err != nil {
+		context.JSON(http.StatusBadRequest, gin.H{"messeage": "Could not parse request"})
 		return
 	}
 
-	project.ID = len(models.GetAllProjects()) + 1
-	project.UserId = 1
-	project.CreatedAt = time.Now()
-	project.UpdatedAt = time.Now()
+	project.ID = 1
+	project.UserID = 1
 
-	project.Save()
-
-	c.JSON(http.StatusCreated, gin.H{"message": "Project created", "project": project})
+	context.JSON(http.StatusCreated, gin.H{"messeage": "Project is created", "project": project})
 }

@@ -5,10 +5,4 @@ Content-Type: application/json
 {
      "title": "Atomic Portfolio",
   "description": "A project portfolio app",
-  "techStack": ["Go", "Gin", "React"],
-  "githubLink": "https://github.com/your/repo",
-  "imageUrls": ["https://yourcdn.com/image1.png"],
-  "isFeatured": true,
-  "slug": "atomic-portfolio",
-    "CreatedAt": "08-04-2025T22:00:00.000Z"
 }
