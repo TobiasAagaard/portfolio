@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"portfolio/Api/models"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -35,6 +36,7 @@ func createProject(context *gin.Context) {
 
 	project.ID = 1
 	project.UserID = 1
+	project.CreatedAt = time.Now()
 
 	project.Save()
 
