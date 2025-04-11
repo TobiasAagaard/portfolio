@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"portfolio/Api/db"
 	"portfolio/Api/models"
 	"time"
 
@@ -9,6 +10,7 @@ import (
 )
 
 func main() {
+	db.InitDB()
 	server := gin.Default()
 
 	server.GET("/projects", getProjects)
@@ -35,7 +37,7 @@ func createProject(context *gin.Context) {
 	}
 
 	project.ID = 1
-	project.UserID = 1
+	project.User_id = 1
 	project.CreatedAt = time.Now()
 
 	project.Save()

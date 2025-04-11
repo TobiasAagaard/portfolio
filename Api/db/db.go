@@ -23,5 +23,18 @@ func InitDB() {
 }
 
 func createTables() {
+	createProjectsTable := `
+	CREATE TABLE IF NOT EXISTS projects (
+	id  INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	description TEXT NOT NULL,
+	createdAt DATETIME NOT NULL,
+	user_id INTEGER 
+	)`
 
+	_, err := DB.Exec(createProjectsTable)
+
+	if err != nil {
+		panic("Could not create project table")
+	}
 }

@@ -7,7 +7,7 @@ type Project struct {
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	CreatedAt   time.Time `json:"createdAt"`
-	UserID      int       `json:"user_id"`
+	User_id     int       `json:"user_id"`
 }
 
 var projects = []Project{}
