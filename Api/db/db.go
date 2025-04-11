@@ -21,3 +21,7 @@ func InitDB() {
 
 	createTables()
 }
+
+func createTables() {
+
+}
