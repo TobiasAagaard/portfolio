@@ -1,14 +1,16 @@
 package models
 
-import "time"
+import (
+	"portfolio/Api/db"
+	"time"
+)
 
 type Project struct {
-	ID          int       `json:"id"`
+	ID          int64
 	Title       string    `json:"title"`
 	Slug        string    `json:"slug"` // for clean URLs like /projects/my-awesome-project
 	Description string    `json:"description"`
 	Thumbnail   string    `json:"thumbnail"`
-	Detail      string    `json:"detail"` // more in-depth description or markdown maybe
 	CreatedAt   time.Time `json:"createdAt"`
 	UpdatedAt   time.Time `json:"updatedAt"` // useful if you allow edits
 	User_id     int       `json:"user_id"`
@@ -16,10 +18,33 @@ type Project struct {
 
 var projects = []Project{}
 
-func (p Project) Save() {
-	//Later add database
+func (p *Project) Save() error {
+	now := time.Now()
+	p.CreatedAt = now
+	p.UpdatedAt = now
 
-	projects = append(projects, p)
+	query := `
+		INSERT INTO projects (title, slug, description, thumbnail, createdAt, updatedAt, user_id)
+		VALUES (?, ?, ?, ?, ?, ?, ?)
+	`
+
+	stmt, err := db.DB.Prepare(query)
+
+	if err != nil {
+		return err
+	}
+
+	defer stmt.Close()
+
+	result, err := stmt.Exec(p.Title, p.Slug, p.Description, p.Thumbnail, p.CreatedAt, p.UpdatedAt, p.User_id)
+
+	if err != nil {
+		return err
+	}
+
+	id, err := result.LastInsertId()
+	p.ID = id
+	return err
 }
 
 func GetAllProjects() []Project {

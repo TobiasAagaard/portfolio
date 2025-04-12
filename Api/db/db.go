@@ -30,7 +30,6 @@ func createTables() {
     slug TEXT NOT NULL,
     description TEXT NOT NULL,
     thumbnail TEXT,
-    detail TEXT,
     createdAt DATETIME NOT NULL,
     updatedAt DATETIME,
     user_id INTEGER
