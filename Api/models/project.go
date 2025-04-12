@@ -11,7 +11,7 @@ type Project struct {
 	Detail      string    `json:"detail"` // more in-depth description or markdown maybe
 	CreatedAt   time.Time `json:"createdAt"`
 	UpdatedAt   time.Time `json:"updatedAt"` // useful if you allow edits
-	UserID      int       `json:"user_id"`
+	User_id     int       `json:"user_id"`
 }
 
 var projects = []Project{}
