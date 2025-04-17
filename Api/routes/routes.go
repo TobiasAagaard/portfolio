@@ -10,6 +10,6 @@ type ProjectHandlers struct {
 }
 
 func SetupRoutes(server *gin.Engine, handlers ProjectHandlers) {
-	server.GET("/projects", getProjects)
-	server.POST("/projects", createProject)
+	server.GET("/projects", handlers.GetProjects)
+	server.POST("/projects", handlers.CreateProject)
 }
