@@ -14,7 +14,12 @@ func main() {
 	db.InitDB()
 	server := gin.Default()
 
-	routes.SetupRoutes(server)
+	projectHandlers := routes.ProjectHandlers{
+		GetProjects:   getProjects,
+		CreateProject: createProject,
+	}
+
+	routes.SetupRoutes(server, projectHandlers)
 
 	server.Run(":8080") //localhost
 }
