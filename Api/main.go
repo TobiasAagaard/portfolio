@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"portfolio/Api/db"
 	"portfolio/Api/models"
+	"portfolio/Api/routes"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -13,8 +14,7 @@ func main() {
 	db.InitDB()
 	server := gin.Default()
 
-	server.GET("/projects", getProjects)
-	server.POST("/projects", createProject)
+	routes.SetupRoutes(server)
 
 	server.Run(":8080") //localhost
 }
