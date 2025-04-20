@@ -48,5 +48,7 @@ func (p *Project) Save() error {
 }
 
 func GetAllProjects() []Project {
+	query := "SELECT * FROM projects"
+	db.DB.Query(query)
 	return projects
 }
