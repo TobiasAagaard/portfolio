@@ -7,7 +7,7 @@ import (
 
 type Project struct {
 	ID          int64
-	Title       string    `json:"title"`
+	Name        string    `json:"name"`
 	Slug        string    `json:"slug"` // for clean URLs like /projects/my-awesome-project
 	Description string    `json:"description"`
 	Thumbnail   string    `json:"thumbnail"`
@@ -36,7 +36,7 @@ func (p *Project) Save() error {
 
 	defer stmt.Close()
 
-	result, err := stmt.Exec(p.Title, p.Slug, p.Description, p.Thumbnail, p.CreatedAt, p.UpdatedAt, p.User_id)
+	result, err := stmt.Exec(p.Name, p.Slug, p.Description, p.Thumbnail, p.CreatedAt, p.UpdatedAt, p.User_id)
 
 	if err != nil {
 		return err
@@ -47,8 +47,26 @@ func (p *Project) Save() error {
 	return err
 }
 
-func GetAllProjects() []Project {
+func GetAllProjects() ([]Project, error) {
 	query := "SELECT * FROM projects"
-	db.DB.Query(query)
-	return projects
+	rows, err := db.DB.Query(query)
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var projects []Project
+
+	for rows.Next() {
+		var project Project
+		err := rows.Scan(&project.ID, &project.Name, &project.Slug, &project.Description, &project.Thumbnail, &project.CreatedAt, &project.UpdatedAt, &project.User_id)
+
+		if err != nil {
+			return nil, err
+		}
+
+		projects = append(projects, project)
+	}
+	return projects, nil
 }

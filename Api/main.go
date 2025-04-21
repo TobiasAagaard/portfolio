@@ -25,7 +25,14 @@ func main() {
 }
 
 func getProjects(context *gin.Context) {
-	projects := models.GetAllProjects()
+	projects, err := models.GetAllProjects()
+	if err != nil {
+		context.JSON(http.StatusInternalServerError, gin.H{
+			"message": "Internal server error",
+			"error":   err.Error(),
+		})
+		return
+	}
 	context.JSON(http.StatusOK, projects)
 }
 
