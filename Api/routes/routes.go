@@ -1,15 +1,13 @@
+// Api/routes/routes.go
 package routes
 
 import (
+	"portfolio/Api/handlers"
+
 	"github.com/gin-gonic/gin"
 )
 
-type ProjectHandlers struct {
-	GetProjects   gin.HandlerFunc
-	CreateProject gin.HandlerFunc
-}
-
-func SetupRoutes(server *gin.Engine, handlers ProjectHandlers) {
-	server.GET("/projects", handlers.GetProjects)
-	server.POST("/projects", handlers.CreateProject)
+func SetupRoutes(server *gin.Engine, projectHandlers handlers.ProjectHandlers) {
+	server.GET("/projects", projectHandlers.GetProjects)
+	server.POST("/projects", projectHandlers.CreateProject)
 }
