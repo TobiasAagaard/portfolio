@@ -3,7 +3,6 @@ package handlers
 import (
 	"net/http"
 	"portfolio/Api/models"
-	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -30,9 +29,7 @@ func (h ProjectHandlers) CreateProject(c *gin.Context) {
 		return
 	}
 
-	project.ID = 1
 	project.User_id = 1
-	project.CreatedAt = time.Now()
 
 	if err := project.Save(); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"message": "Could not save project", "error": err.Error()})
