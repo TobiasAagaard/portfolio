@@ -81,3 +81,12 @@ func Slugify(s string) string {
 	s = regexp.MustCompile(`-+`).ReplaceAllString(s, "-")
 	return s
 }
+
+func IsSlugUnique(slug string) (bool, error) {
+	var count int
+	err := db.DB.QueryRow("SELECT COUNT(*) FROM projects WHERE slug = ?", slug).Scan(&count)
+	if err != nil {
+		return false, err
+	}
+	return count == 0, nil
+}
