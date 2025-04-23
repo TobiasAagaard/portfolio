@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"portfolio/Api/db"
 	"regexp"
 	"strings"
@@ -32,6 +33,19 @@ func (p *Project) Save() error {
 
 	stmt, err := db.DB.Prepare(query)
 
+	if p.Slug == "" {
+		p.Slug = Slugify(p.Name)
+	}
+
+	// check if slug is unique, or handle duplicates
+	unique, err := IsSlugUnique(p.Slug)
+	if err != nil {
+		return err
+	}
+	if !unique {
+		return fmt.Errorf("slug already in use")
+	}
+
 	if err != nil {
 		return err
 	}
@@ -47,6 +61,7 @@ func (p *Project) Save() error {
 	id, err := result.LastInsertId()
 	p.ID = id
 	return err
+
 }
 
 func GetAllProjects() ([]Project, error) {
