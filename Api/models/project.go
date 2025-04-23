@@ -2,6 +2,8 @@ package models
 
 import (
 	"portfolio/Api/db"
+	"regexp"
+	"strings"
 	"time"
 )
 
@@ -69,4 +71,13 @@ func GetAllProjects() ([]Project, error) {
 		projects = append(projects, project)
 	}
 	return projects, nil
+}
+
+func Slugify(s string) string {
+	s = strings.ToLower(s)
+	s = strings.TrimSpace(s)
+	s = regexp.MustCompile(`[^a-z0-9\s-]`).ReplaceAllString(s, "")
+	s = strings.ReplaceAll(s, " ", "-")
+	s = regexp.MustCompile(`-+`).ReplaceAllString(s, "-")
+	return s
 }
