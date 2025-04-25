@@ -1,4 +1,9 @@
 
+
 export const Contact: React.FC = () => {
-    return null
+    return (
+        <form>
+            <input type="text" />
+        </form>
+    )
 }
