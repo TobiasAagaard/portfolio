@@ -10,4 +10,5 @@ import (
 func SetupRoutes(server *gin.Engine, projectHandlers handlers.ProjectHandlers) {
 	server.GET("/projects", projectHandlers.GetProjects)
 	server.POST("/projects", projectHandlers.CreateProject)
+	server.GET("projectsDetails")
 }
