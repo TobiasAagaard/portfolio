@@ -1,7 +1,0 @@
-POST http://localhost:8080/projects
-Content-Type: application/json
-
-{
-  "title": "Atomic Workout",
-  "description": "A fitness app"
-}
