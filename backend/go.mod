@@ -1,8 +1,12 @@
-module github.com/TobiasAagaard/portfolio
+module github.com/Tobiasaagaard/portfolio/backend
 
 go 1.25.3
 
-require github.com/gin-gonic/gin v1.11.0
+require (
+	github.com/gin-gonic/gin v1.11.0
+	gorm.io/gorm v1.31.1
+	gorm.io/driver/sqlserver v1.6.3
+)
 
 require (
 	github.com/bytedance/sonic v1.14.0 // indirect
@@ -46,6 +50,5 @@ require (
 	golang.org/x/text v0.31.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
 	google.golang.org/protobuf v1.36.9 // indirect
-	gorm.io/driver/sqlserver v1.6.3 // indirect
-	gorm.io/gorm v1.31.1 // indirect
+    
 )
