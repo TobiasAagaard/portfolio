@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"gorm.io/driver/postgres"
+	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 )
 
@@ -13,7 +13,7 @@ func InitDB() *gorm.DB {
 	if dsn == "" {
 		log.Fatal("DATABASE_URL environment variable is not set")
 	}
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("failed to connect database: %v", err)
 	}
