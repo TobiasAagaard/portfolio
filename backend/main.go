@@ -1,19 +1,25 @@
 package main
 
 import (
-	"net/http"
+	"log"
+	"os"
 
+	"github.com/TobiasAagaard/portfolio/routes"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.Default()
+	r.Use(gin.Logger(), gin.Recovery())
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
+	routes.SetupRoutes(r)
 
-	r.Run() // listen and serve on
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	if err := r.Run(":" + port); err != nil {
+		log.Fatal(err.Error())
+	}
 }
