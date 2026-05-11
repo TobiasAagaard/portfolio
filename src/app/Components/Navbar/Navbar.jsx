@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 export const Navbar = () => {
     return (
@@ -6,14 +7,14 @@ export const Navbar = () => {
 
             <ul className="flex space-x-4 list-none">
                 <li className="text-gray-600 hover:text-gray-900">
-                    <a href="#about" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#about" className="text-gray-600 hover:text-gray-900">
                         About
-                    </a>
+                    </Link>
                 </li>
                 <li className="text-gray-600 hover:text-gray-900">
-                    <a href="#projects" className="text-gray-600 hover:text-gray-900">
+                    <Link href="#projects" className="text-gray-600 hover:text-gray-900">
                         Projects
-                    </a>
+                    </Link>
                 </li>
 
             </ul>
