@@ -1,10 +1,10 @@
-import { BurgerMenu } from "@/app/Components/BurgerMenu/BurgerMenu.jsx";
+import { BurgerMenu } from "../BurgerMenu/BurgerMenu"
 import Link from "next/link"
 
 export const Navbar = () => {
     return (
         <>
-        <nav className="w-full border-b border-gray-200 flex items-center justify-between px-6 py-4">
+        <nav className="relative w-full border-b border-gray-200 flex items-center justify-between px-6 py-4">
             <h2 className="text-2xl font-bold">Tobias</h2>
 
             <ul className="hidden md:flex space-x-4 list-none">

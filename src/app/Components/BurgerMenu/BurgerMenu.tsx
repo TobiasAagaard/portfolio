@@ -8,31 +8,70 @@ export const BurgerMenu = () => {
         setIsOpen(!isOpen)
     }
 
+    const links = [
+        { href: "#about", label: "About" },
+        { href: "#projects", label: "Projects" },
+    ]
+
     return (
         <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-600 hover:text-gray-900 focus:outline-none">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+            <button
+                onClick={toggleMenu}
+                aria-label="Toggle menu"
+                aria-expanded={isOpen}
+                className="relative z-50 w-10 h-10 flex flex-col justify-center items-center focus:outline-none text-gray-700 hover:text-gray-900 transition-colors duration-300"
+            >
+                <span
+                    className={`absolute block h-0.5 w-6 bg-current rounded transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                        isOpen ? "rotate-45" : "-translate-y-2"
+                    }`}
+                />
+                <span
+                    className={`absolute block h-0.5 w-6 bg-current rounded transition-all duration-200 ease-in-out ${
+                        isOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"
+                    }`}
+                />
+                <span
+                    className={`absolute block h-0.5 w-6 bg-current rounded transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                        isOpen ? "-rotate-45" : "translate-y-2"
+                    }`}
+                />
             </button>
 
-            {isOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md">
-                    <ul className="flex flex-col items-center space-y-4 py-4 list-none">
-                        <li className="text-gray-600 hover:text-gray-900">
-                            <a href="#about" className="text-gray-600 hover:text-gray-900">
-                                About
+            <div
+                aria-hidden={!isOpen}
+                className={`fixed inset-0 z-40 bg-[#FAF7F2] transition-[clip-path] duration-700 ease-in-out ${
+                    isOpen ? "pointer-events-auto" : "pointer-events-none"
+                }`}
+                style={{
+                    clipPath: isOpen
+                        ? "circle(150% at calc(100% - 2rem) 2rem)"
+                        : "circle(0% at calc(100% - 2rem) 2rem)",
+                }}
+            >
+                <ul className="flex flex-col items-center justify-center h-full gap-8 list-none">
+                    {links.map((link, i) => (
+                        <li
+                            key={link.href}
+                            className={`transition-all duration-500 ease-out ${
+                                isOpen
+                                    ? "translate-y-0 opacity-100"
+                                    : "translate-y-6 opacity-0"
+                            }`}
+                            style={{ transitionDelay: isOpen ? `${i * 100 + 300}ms` : "0ms" }}
+                        >
+                            <a
+                                href={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-3xl font-light text-gray-800 hover:text-gray-500 transition-colors duration-200"
+                            >
+                                {link.label}
                             </a>
                         </li>
-                        <li className="text-gray-600 hover:text-gray-900">
-                            <a href="#projects" className="text-gray-600 hover:text-gray-900">
-                                Projects
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            )}
-        </div>  
+                    ))}
+                </ul>
+            </div>
+        </div>
     )
 
 }

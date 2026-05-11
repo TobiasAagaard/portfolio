@@ -1,4 +1,4 @@
-import { Navbar } from "@/app/Components/Navbar/Navbar.jsx";
+import { Navbar } from "./Components/Navbar/Navbar"
 
 export default function Home() {
   return (
