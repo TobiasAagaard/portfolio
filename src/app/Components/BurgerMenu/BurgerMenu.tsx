@@ -19,7 +19,7 @@ export const BurgerMenu = () => {
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
                 aria-expanded={isOpen}
-                className="relative z-50 w-10 h-10 flex flex-col justify-center items-center focus:outline-none text-gray-700 hover:text-gray-900 transition-colors duration-300"
+                className="relative z-50 w-10 h-10 flex flex-col justify-center cursor-pointer items-center focus:outline-none text-gray-700 hover:text-gray-900 transition-colors duration-300"
             >
                 <span
                     className={`absolute block h-0.5 w-6 bg-current rounded transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${

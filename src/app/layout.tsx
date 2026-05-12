@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'], 
+  variable: '--font-cormorant',
 });
+
+const geist = Geist_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], 
+  variable: '--font-geist'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +25,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${lato.className} min-h-full flex flex-col`}>
+      <body className={`${cormorantGaramond.className} ${geist.className} min-h-full flex flex-col`}>
         {children}
       </body>
     </html>
