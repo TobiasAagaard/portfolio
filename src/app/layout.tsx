@@ -28,7 +28,7 @@ export default function RootLayout({
   
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${cormorantGaramond.className} ${geist.className} min-h-full flex flex-col`}>
+      <body className={`${cormorantGaramond.variable} ${geist.variable} font-body min-h-full flex flex-col`}>
         {children}
       </body>
     </html>
